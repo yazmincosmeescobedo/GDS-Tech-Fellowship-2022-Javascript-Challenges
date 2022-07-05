@@ -85,18 +85,18 @@ var num1 = prompt("Enter a first number: ");
 var num2 = prompt("Enter a second number: "); 
 
 if(operator == "+"){
-    add(num1, num2); 
+    var result = add(num1, num2); 
     var output = `${num1} + ${num2} = ${result}`; 
 }
 else if(operator == "-"){
-    subtract(num1, num2); 
+    var result = subtract(num1, num2); 
     var output = `${num1} - ${num2} = ${result}`;
 }
 else if(operator == "*"){
-    multiply(num1, num2); 
+    var result = multiply(num1, num2); 
     var output = `${num1} + ${num2} = ${result}`;
 }
 else if(operator == "/"){
-    divide(num1, num2)
+    var result =  divide(num1, num2)
     var output = `${num1} / ${num2} = ${result}`;
 }
