@@ -53,28 +53,32 @@ console.log(`It appears you are ${result}`)
 
 var num1; 
 var num2; 
-var result; 
 
 // This code can be made more dry but result variable 
 // is used to show a step by step progression in code. 
 function add(num1, num2){
-    result = num1 + num2; 
-    return result; 
+    var result = parseInt(num1) + parseInt(num2); 
+    return result;
 }
 
 function subtract(num1, num2){
-    result = num1 - num2; 
+    var result = parseInt(num1) - parseInt(num2); 
     return result; 
 }
 
 function multiply(num1, num2){
-    result = num1 * num2; 
-    return result; 
+    var result = parseInt(num1) * parseInt(num2); 
+    return result;
 }
 
 function divide(num1, num2){
-    result = num1/num2; 
-    return result; 
+    var result = parseInt(num1)/parseInt(num2); 
+
+    if (result !== result) { 
+        throw new Error(num1 + " / " + num2); 
+    }
+
+    return result;  
 }
 
 // --- VERY HARD --- // 
@@ -87,16 +91,20 @@ var num2 = prompt("Enter a second number: ");
 if(operator == "+"){
     var result = add(num1, num2); 
     var output = `${num1} + ${num2} = ${result}`; 
+    console.log(output);
 }
 else if(operator == "-"){
     var result = subtract(num1, num2); 
     var output = `${num1} - ${num2} = ${result}`;
+    console.log(output);
 }
 else if(operator == "*"){
     var result = multiply(num1, num2); 
-    var output = `${num1} + ${num2} = ${result}`;
+    var output = `${num1} * ${num2} = ${result}`;
+    console.log(output);
 }
 else if(operator == "/"){
     var result =  divide(num1, num2)
     var output = `${num1} / ${num2} = ${result}`;
+    console.log(output);
 }
